@@ -36,7 +36,7 @@ module Raven
     def initialize
       self.server = ENV['SENTRY_DSN'] if ENV['SENTRY_DSN']
       @context_lines = 3
-      self.environments = %w[ production ]
+      self.environments = %w[ production staging ]
       self.current_environment = ENV['RAILS_ENV'] || ENV['RACK_ENV'] || 'development'
       self.send_modules = true
       self.excluded_exceptions = []
